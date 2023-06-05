@@ -2,6 +2,10 @@
 
 #### Rock-Paper-Scissors is a classic game built with Next.js 13, Tailwind CSS for UI styling, and TypeScript for type checking. Challenge your friends or play against the computer in this fun and interactive game.
 
+<p align="center">
+  <img width="300px" hight="300px" src="https://github.com/mamad-1999/Rock-paper-scissor/assets/91375726/8344135d-452c-4085-b81c-0f0d72ee1362" alt="js" />
+</p>
+
 ### Features
 
 - Single Player Mode: Play against the computer and test your skills.
