@@ -6,7 +6,7 @@ const GameView = () => {
             <Image
                 src={"/images/rock2.png"}
                 alt="player1"
-                width={150}
+                width={160}
                 height={100}
                 quality={100}
                 priority={true}
@@ -15,7 +15,7 @@ const GameView = () => {
             <Image
                 src={"/images/paper1.png"}
                 alt="player1"
-                width={150}
+                width={160}
                 height={100}
                 quality={100}
                 priority={true}
