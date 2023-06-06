@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useReducer, Dispatch } from "react";
+import { createContext, useReducer, Dispatch, useContext } from "react";
 
 type StateType = {
     userScore: number
@@ -59,3 +59,7 @@ const GameContextProvider = ({ children }: { children: React.ReactNode }) => {
         </GameContext.Provider>
     )
 }
+
+export default GameContextProvider
+
+export const useGameContext = () => useContext(GameContext)
