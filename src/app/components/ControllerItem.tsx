@@ -2,12 +2,14 @@ import Image from "next/image"
 
 type ControllerItemProps = {
     path: string
+    click: () => void
 }
 
-const ControllerItem = ({ path }: ControllerItemProps) => {
+const ControllerItem = ({ path, click }: ControllerItemProps) => {
     return (
         <>
             <Image
+                onClick={click}
                 src={path}
                 width={100}
                 height={100}

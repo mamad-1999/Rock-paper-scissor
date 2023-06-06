@@ -37,7 +37,7 @@ const reducer = (state: StateType, action: ActionType) => {
         case "INCREMENT_ROUND": {
             return { ...state, roundCounter: state.roundCounter + 1 }
         }
-        case "INCREMENT_ROUND": {
+        case "SET_SYMBOL": {
             return { ...state, userSelect: action.payload }
         }
         default:
