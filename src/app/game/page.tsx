@@ -5,7 +5,7 @@ import Scores from "../components/Scores"
 
 const GamePage = () => {
     return (
-        <div className="w-full min-h-screen bg-stone-200 flex flex-col">
+        <div className="w-full min-h-screen bg-stone-200 flex flex-col select-none">
             <Scores />
             <Round />
             <GameView />
