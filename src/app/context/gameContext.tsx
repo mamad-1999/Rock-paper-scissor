@@ -8,6 +8,7 @@ type StateType = {
     gameTies: number
     roundCounter: number
     userSelect: string
+    userImage: string
 }
 
 type ActionType = {
@@ -20,7 +21,8 @@ const initialState = {
     gameTies: 0,
     pcScore: 0,
     roundCounter: 0,
-    userSelect: ""
+    userSelect: "",
+    userImage: "/images/rock2.png"
 } as StateType
 
 const reducer = (state: StateType, action: ActionType) => {
@@ -39,6 +41,9 @@ const reducer = (state: StateType, action: ActionType) => {
         }
         case "SET_SYMBOL": {
             return { ...state, userSelect: action.payload }
+        }
+        case "SET_USER_IMAGE": {
+            return { ...state, userImage: action.payload }
         }
         default:
             return state;

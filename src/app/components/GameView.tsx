@@ -1,10 +1,14 @@
+"use client"
+
 import Image from "next/image"
+import { useGameContext } from "../context/gameContext"
 
 const GameView = () => {
+    const { state } = useGameContext()
     return (
         <div className='w-full flex justify-between items-center mt-6'>
             <Image
-                src={"/images/rock2.png"}
+                src={state.userImage}
                 alt="player1"
                 width={160}
                 height={100}

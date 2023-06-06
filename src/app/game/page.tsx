@@ -1,3 +1,5 @@
+"use client"
+
 import Controller from "../components/Controller"
 import GameView from "../components/GameView"
 import Round from "../components/Round"
