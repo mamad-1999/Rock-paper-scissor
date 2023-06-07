@@ -8,14 +8,21 @@ type StateType = {
     gameTies: number
     roundCounter: number
     userSelect: string
+    pcSelect: string
     userImage: string
     pcImage: string
 }
 
-type ActionType = {
+type ActionPayloadType = {
     type: string
     payload: string
 }
+
+type ActionType = {
+    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE"
+}
+
+type ActionReducerType = ActionPayloadType | ActionType
 
 const initialState = {
     userScore: 0,
@@ -23,17 +30,18 @@ const initialState = {
     pcScore: 0,
     roundCounter: 0,
     userSelect: "",
+    pcSelect: "",
     userImage: "/images/rock2.png",
     pcImage: "/images/rock1.png"
 } as StateType
 
-const reducer = (state: StateType, action: ActionType) => {
+const reducer = (state: StateType, action: ActionReducerType) => {
     switch (action.type) {
         case "INCREMENT_USER_SCORE": {
             return { ...state, userScore: state.userScore + 1 }
         }
         case "INCREMENT_PC_SCORE": {
-            return { ...state, psScore: state.pcScore + 1 }
+            return { ...state, pcScore: state.pcScore + 1 }
         }
         case "INCREMENT_GAME_TIES": {
             return { ...state, gameTies: state.gameTies + 1 }
@@ -41,8 +49,11 @@ const reducer = (state: StateType, action: ActionType) => {
         case "INCREMENT_ROUND": {
             return { ...state, roundCounter: state.roundCounter + 1 }
         }
-        case "SET_SYMBOL": {
+        case "SET_USER_SYMBOL": {
             return { ...state, userSelect: action.payload }
+        }
+        case "SET_PC_SYMBOL": {
+            return { ...state, pcSelect: action.payload }
         }
         case "SET_USER_IMAGE": {
             return { ...state, userImage: action.payload }
@@ -58,7 +69,7 @@ const reducer = (state: StateType, action: ActionType) => {
 
 export const GameContext = createContext<{
     state: StateType;
-    dispatch: Dispatch<ActionType>;
+    dispatch: Dispatch<ActionReducerType>;
 }>({ state: initialState, dispatch: () => null });
 
 const GameContextProvider = ({ children }: { children: React.ReactNode }) => {
