@@ -9,6 +9,7 @@ type StateType = {
     roundCounter: number
     userSelect: string
     userImage: string
+    pcImage: string
 }
 
 type ActionType = {
@@ -22,7 +23,8 @@ const initialState = {
     pcScore: 0,
     roundCounter: 0,
     userSelect: "",
-    userImage: "/images/rock2.png"
+    userImage: "/images/rock2.png",
+    pcImage: "/images/rock1.png"
 } as StateType
 
 const reducer = (state: StateType, action: ActionType) => {
@@ -44,6 +46,9 @@ const reducer = (state: StateType, action: ActionType) => {
         }
         case "SET_USER_IMAGE": {
             return { ...state, userImage: action.payload }
+        }
+        case "SET_PC_IMAGE": {
+            return { ...state, pcImage: action.payload }
         }
         default:
             return state;

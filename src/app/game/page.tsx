@@ -5,13 +5,15 @@ import GameView from "../components/GameView"
 import Round from "../components/Round"
 import Scores from "../components/Scores"
 import { randomPcMove } from "../../../utils/randomPcMove"
+import { useGameContext } from "../context/gameContext"
 
 const GamePage = () => {
+    const { dispatch } = useGameContext()
 
     const pcMoveHandler = () => {
         setTimeout(() => {
             const { title, image } = randomPcMove()
-            console.log(title)
+            dispatch({ type: "SET_PC_IMAGE", payload: image })
         }, 300);
     }
     return (

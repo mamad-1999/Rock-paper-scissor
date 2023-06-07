@@ -1,15 +1,15 @@
 let pcMove = [
   {
     title: "rock",
-    image: "images/rock1.png",
+    image: "/images/rock1.png",
   },
   {
     title: "scissor",
-    image: "images/scissors1.png",
+    image: "/images/scissors1.png",
   },
   {
     title: "paper",
-    image: "images/paper1.png",
+    image: "/images/paper1.png",
   },
 ];
 

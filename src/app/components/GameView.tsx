@@ -17,8 +17,8 @@ const GameView = () => {
                 className="sm:w-[280px] sm:h-[130px] md:w-[330px] md:h-[160px] lg:w-[380px] lg:h-[180px]"
             />
             <Image
-                src={"/images/paper1.png"}
-                alt="player1"
+                src={state.pcImage}
+                alt="player2"
                 width={160}
                 height={100}
                 quality={100}
