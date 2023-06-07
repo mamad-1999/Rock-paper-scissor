@@ -6,7 +6,7 @@ import { useGameContext } from "../context/gameContext"
 const GameView = () => {
     const { state } = useGameContext()
     return (
-        <div className='w-full flex justify-between items-center mt-6'>
+        <div className='w-full flex justify-between items-center mt-12 lg:mt-2'>
             <Image
                 src={state.userImage}
                 alt="player1"
