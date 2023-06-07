@@ -1,7 +1,9 @@
 "use client"
 
+// --- import necessary react item --- //
 import { createContext, useReducer, Dispatch, useContext } from "react";
 
+// --- state type --- //
 type StateType = {
     userScore: number
     pcScore: number
@@ -13,6 +15,7 @@ type StateType = {
     pcImage: string
 }
 
+// --- action type {type and payload} --- //
 type ActionPayloadType = {
     type: string
     payload: string
@@ -24,6 +27,7 @@ type ActionType = {
 
 type ActionReducerType = ActionPayloadType | ActionType
 
+// --- state --- //
 const initialState = {
     userScore: 0,
     gameTies: 0,
@@ -35,6 +39,8 @@ const initialState = {
     pcImage: "/images/rock1.png"
 } as StateType
 
+
+// --- Reducer function --- //
 const reducer = (state: StateType, action: ActionReducerType) => {
     switch (action.type) {
         case "INCREMENT_USER_SCORE": {
@@ -66,12 +72,14 @@ const reducer = (state: StateType, action: ActionReducerType) => {
     }
 }
 
-
+// --- create context --- //
 export const GameContext = createContext<{
     state: StateType;
     dispatch: Dispatch<ActionReducerType>;
 }>({ state: initialState, dispatch: () => null });
 
+
+// --- provider component --- //
 const GameContextProvider = ({ children }: { children: React.ReactNode }) => {
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
@@ -83,4 +91,5 @@ const GameContextProvider = ({ children }: { children: React.ReactNode }) => {
 
 export default GameContextProvider
 
+// --- easy use this context --- //
 export const useGameContext = () => useContext(GameContext)

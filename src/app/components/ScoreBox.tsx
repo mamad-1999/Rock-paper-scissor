@@ -4,7 +4,6 @@ type ScoreBoxPropsType = {
     scoreColor: string
 }
 
-
 const ScoreBox = ({ score, title, scoreColor }: ScoreBoxPropsType) => {
     return (
         <div className="flex flex-col justify-center items-center gap-3">
