@@ -3,12 +3,17 @@
 import { useGameContext } from '../context/gameContext'
 import ControllerItem from './ControllerItem'
 
-const Controller = () => {
-    const { state, dispatch } = useGameContext()
+type ControllerProps = {
+    pcMove: () => void
+}
+
+const Controller = ({ pcMove }: ControllerProps) => {
+    const { dispatch } = useGameContext()
 
     const dispatcher = (key: string, path: string) => {
         dispatch({ type: "SET_SYMBOL", payload: key })
         dispatch({ type: "SET_USER_IMAGE", payload: path })
+        pcMove()
     }
 
     const rockClick = () => {
