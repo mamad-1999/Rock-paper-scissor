@@ -20,15 +20,13 @@ const GamePage = () => {
     }, [state.pcSelect, state.userSelect])
 
     const pcMoveHandler = () => {
-        // setTimeout(() => {
         const { title, image } = randomPcMove()
         dispatch({ type: "SET_PC_IMAGE", payload: image })
         dispatch({ type: "SET_PC_SYMBOL", payload: title })
-        // }, 300);
     }
 
     const determineWinner = (user: string, pc: string) => {
-        console.log(user, pc)
+        dispatch({ type: "INCREMENT_ROUND" })
         if (user === pc) {
             return dispatch({ type: "INCREMENT_GAME_TIES" })
         }
@@ -48,7 +46,7 @@ const GamePage = () => {
     return (
         <div className="w-full min-h-screen bg-stone-200 flex flex-col select-none">
             <Scores />
-            <Round />
+            <Round round={state.roundCounter} />
             <GameView />
             <Controller pcMove={pcMoveHandler} />
         </div>

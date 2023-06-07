@@ -19,7 +19,7 @@ type ActionPayloadType = {
 }
 
 type ActionType = {
-    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE"
+    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE" | "INCREMENT_ROUND"
 }
 
 type ActionReducerType = ActionPayloadType | ActionType
