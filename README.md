@@ -32,3 +32,7 @@
 - The computer will randomly select its move.
 - The result of the game (win, loss, or tie) will be displayed, along with the updated scores.
 - Play again to continue the game.
+
+----
+![Screenshot at 2023-06-08 18-13-31](https://github.com/mamad-1999/Rock-paper-scissor/assets/91375726/c935fc13-e25b-438d-87fb-6518ff508b40)
+
