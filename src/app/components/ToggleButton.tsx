@@ -4,7 +4,7 @@ import { useContext } from "react";
 const ToggleButton = () => {
 
     return (
-        <div className="flex justify-center items-center absolute top-8 w-12 h-12 rounded-3xl bg-button cursor-pointer">
+        <div className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-12 h-12 rounded-3xl bg-red-400 cursor-pointer">
             {"yes" ?
                 <svg
                     className="absolute w-8 h-8 fill-white"

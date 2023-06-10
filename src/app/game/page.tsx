@@ -1,6 +1,6 @@
 "use client"
 
-import { Controller, Scores, Round, GameView } from "../components/index"
+import { Controller, Scores, Round, GameView, ToggleButton } from "../components/index"
 import { randomPcMove } from "../../../utils/randomPcMove"
 import { useGameContext } from "../context/gameContext"
 import { useEffect } from "react"
@@ -48,11 +48,12 @@ const GamePage = () => {
     }
 
     return (
-        <div className="w-full min-h-screen bg-zinc-900 flex flex-col select-none">
+        <div className="w-full min-h-screen bg-stone-200 flex flex-col select-none relative">
             <Scores />
             <Round round={state.roundCounter} />
             <GameView />
             <Controller pcMove={pcMoveHandler} />
+            <ToggleButton />
         </div>
     )
 }

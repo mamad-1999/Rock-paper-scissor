@@ -5,6 +5,7 @@ import Round from "./Round";
 import ScoreBox from "./ScoreBox";
 import Scores from "./Scores";
 import GameViewImage from "./GameViewImage";
+import ToggleButton from "./ToggleButton";
 
 export {
   Controller,
@@ -14,4 +15,5 @@ export {
   Round,
   ScoreBox,
   Scores,
+  ToggleButton,
 };
