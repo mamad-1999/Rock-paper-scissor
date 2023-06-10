@@ -4,5 +4,14 @@ import GameView from "./GameView";
 import Round from "./Round";
 import ScoreBox from "./ScoreBox";
 import Scores from "./Scores";
+import GameViewImage from "./GameViewImage";
 
-export { Controller, ControllerItem, GameView, Round, ScoreBox, Scores };
+export {
+  Controller,
+  ControllerItem,
+  GameView,
+  GameViewImage,
+  Round,
+  ScoreBox,
+  Scores,
+};
