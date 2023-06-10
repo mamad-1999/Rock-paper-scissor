@@ -1,3 +1,4 @@
+import ThemeProvider from "../context/ThemeContext"
 import GameContextProvider from "../context/gameContext"
 
 export default function GameLayout({
@@ -7,7 +8,9 @@ export default function GameLayout({
 }) {
     return (
         <GameContextProvider>
-            {children}
+            <ThemeProvider>
+                {children}
+            </ThemeProvider>
         </GameContextProvider>
     )
 }
