@@ -1,11 +1,17 @@
 "use client"
 
 import { useContext } from "react";
+import { useThemeCOntext } from "../context/ThemeContext";
 const ToggleButton = () => {
+    const { theme, setTheme } = useThemeCOntext()
+
+    const handelToggleChange = () => {
+        setTheme(prevTheme => prevTheme === "dark" ? "light" : "dark")
+    };
 
     return (
-        <div className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-12 h-12 rounded-3xl bg-red-400 cursor-pointer">
-            {"yes" ?
+        <div onClick={handelToggleChange} className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-12 h-12 rounded-3xl bg-red-400 cursor-pointer">
+            {theme === "light" ?
                 <svg
                     className="absolute w-8 h-8 fill-white"
                     xmlns="http://www.w3.org/2000/svg"
