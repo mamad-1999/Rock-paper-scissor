@@ -1,7 +1,7 @@
 "use client"
 
 import { useGameContext } from "../context/gameContext"
-import ScoreBox from "./ScoreBox"
+import { ScoreBox } from "./index"
 
 const Scores = () => {
     const { state } = useGameContext()

@@ -1,7 +1,7 @@
 "use client"
 
-import { useGameContext } from '../context/gameContext'
-import ControllerItem from './ControllerItem'
+import { useGameContext } from '../context/gameContext';
+import { ControllerItem } from './index';
 
 type ControllerProps = {
     pcMove: () => void

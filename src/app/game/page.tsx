@@ -1,9 +1,6 @@
 "use client"
 
-import Controller from "../components/Controller"
-import GameView from "../components/GameView"
-import Round from "../components/Round"
-import Scores from "../components/Scores"
+import { Controller, Scores, Round, GameView } from "../components/index"
 import { randomPcMove } from "../../../utils/randomPcMove"
 import { useGameContext } from "../context/gameContext"
 import { useEffect } from "react"
