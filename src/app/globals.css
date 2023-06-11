@@ -11,3 +11,7 @@ html.dark {
   --color-bg-primary: rgb(24 24 27);
   --text-color: rgb(231 229 228);
 }
+
+* {
+  transition: all 500ms;
+}
