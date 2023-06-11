@@ -1,6 +1,6 @@
 "use client"
 
-import { Controller, Scores, Round, GameView, ToggleButton } from "../components/index"
+import { Controller, Scores, Round, GameView, ToggleButton, ButtonBox } from "../components/index"
 import { randomPcMove } from "../../../utils/randomPcMove"
 import { useGameContext } from "../context/gameContext"
 import { useEffect } from "react"
@@ -54,6 +54,7 @@ const GamePage = () => {
             <GameView />
             <Controller pcMove={pcMoveHandler} />
             <ToggleButton />
+            <ButtonBox />
         </div>
     )
 }

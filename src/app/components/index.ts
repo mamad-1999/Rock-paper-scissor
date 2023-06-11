@@ -6,6 +6,7 @@ import ScoreBox from "./ScoreBox";
 import Scores from "./Scores";
 import GameViewImage from "./GameViewImage";
 import ToggleButton from "./ToggleButton";
+import ButtonBox from "./ButtonBox";
 
 export {
   Controller,
@@ -16,4 +17,5 @@ export {
   ScoreBox,
   Scores,
   ToggleButton,
+  ButtonBox,
 };
