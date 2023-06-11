@@ -16,7 +16,9 @@ const Controller = ({ pcMove }: ControllerProps) => {
         dispatch({ type: "SET_USER_IMAGE", payload: path })
 
         // call pcMove to move the pc by the random chose
-        pcMove()
+        setTimeout(() => {
+            pcMove()
+        }, 500);
     }
 
     // rock, scissor and paper click handler

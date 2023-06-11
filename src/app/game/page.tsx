@@ -15,7 +15,7 @@ const GamePage = () => {
             determineWinner(userSelect, pcSelect)
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [state.pcSelect, state.userSelect])
+    }, [state.pcSelect])
 
     // handle pc Move after user clicked on controller button
     const pcMoveHandler = () => {
