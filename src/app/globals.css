@@ -4,11 +4,11 @@
 
 :root {
   --color-bg-primary: rgb(231 229 228);
-  --text-color: rgb(24 24 27);
+  --text-color: rgb(27, 27, 31);
 }
 
 html.dark {
-  --color-bg-primary: rgb(24 24 27);
+  --color-bg-primary: rgb(27, 27, 31);
   --text-color: rgb(231 229 228);
 }
 

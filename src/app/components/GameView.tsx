@@ -7,7 +7,7 @@ const GameView = () => {
     const { state } = useGameContext()
 
     return (
-        <div className='w-full flex justify-between items-center mt-12 lg:mt-2'>
+        <div className='w-full flex justify-between items-center mt-16 lg:mt-2'>
             <GameViewImage image={state.userImage} />
             <GameViewImage image={state.pcImage} />
         </div>
