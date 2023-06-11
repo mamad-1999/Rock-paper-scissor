@@ -48,7 +48,7 @@ const GamePage = () => {
     }
 
     return (
-        <div className="w-full min-h-screen bg-stone-200 flex flex-col select-none relative">
+        <div className="w-full min-h-screen bg-primary flex flex-col select-none relative">
             <Scores />
             <Round round={state.roundCounter} />
             <GameView />

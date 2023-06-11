@@ -19,7 +19,7 @@ const Scores = () => {
             <ScoreBox
                 title="Equal"
                 score={gameTies}
-                scoreColor="text-zinc-900" />
+                scoreColor="text-primary" />
             <ScoreBox
                 title="Win"
                 score={pcScore}
