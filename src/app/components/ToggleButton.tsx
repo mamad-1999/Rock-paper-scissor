@@ -10,10 +10,10 @@ const ToggleButton = () => {
     };
 
     return (
-        <div onClick={handelToggleChange} className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-12 h-12 rounded-3xl bg-red-400 cursor-pointer">
+        <div onClick={handelToggleChange} className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-10 md:w-12 h-10 md:h-12 rounded-3xl bg-zinc-600 cursor-pointer">
             {theme === "light" ?
                 <svg
-                    className="absolute w-8 h-8 fill-white"
+                    className="absolute w-6 md:w-8 h-6 md:h-8 fill-white"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -43,7 +43,7 @@ const ToggleButton = () => {
                 </svg>
                 :
                 <svg
-                    className="absolute w-8 h-8 fill-white"
+                    className="absolute w-6 md:w-8 h-6 md:h-8 fill-white"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
