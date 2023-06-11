@@ -22,7 +22,7 @@ type ActionPayloadType = {
 }
 
 type ActionType = {
-    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE" | "INCREMENT_ROUND"
+    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE" | "INCREMENT_ROUND" | "RESET"
 }
 
 type ActionReducerType = ActionPayloadType | ActionType
@@ -66,6 +66,9 @@ const reducer = (state: StateType, action: ActionReducerType) => {
         }
         case "SET_PC_IMAGE": {
             return { ...state, pcImage: action.payload }
+        }
+        case "RESET": {
+            return initialState
         }
         default:
             return state;
