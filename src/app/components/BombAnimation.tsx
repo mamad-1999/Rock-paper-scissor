@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useGameContext } from "../context/gameContext";
 
 const BombAnimation = () => {
@@ -24,10 +24,10 @@ const BombAnimation = () => {
         "Chocolate",
         "Crimson",
     ];
-    let streamingConfetti = false;
+    let streamingConfetti: boolean = false;
     let animationTimer: any = null;
     let particles: any[] = [];
-    let waveAngle = 0;
+    let waveAngle: number = 0;
 
     const resetParticle = (particle: any, width: number, height: number) => {
         particle.color = colors[(Math.random() * colors.length) | 0];
@@ -41,8 +41,8 @@ const BombAnimation = () => {
     };
 
     const startConfetti = () => {
-        let width = window.innerWidth;
-        let height = window.innerHeight;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         if (typeof window !== "undefined" && window.requestAnimationFrame) {
             window.requestAnimationFrame =
                 window.requestAnimationFrame ||
@@ -94,8 +94,8 @@ const BombAnimation = () => {
     };
 
     const updateParticles = () => {
-        let width = window.innerWidth;
-        let height = window.innerHeight;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         let particle;
         waveAngle += 0.01;
         for (let i = 0; i < particles.length; i++) {
