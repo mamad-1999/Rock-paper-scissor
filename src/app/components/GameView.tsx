@@ -1,6 +1,7 @@
 "use client"
 
 import { useGameContext } from "../context/gameContext"
+import QuestionImage from "./QuestionImage"
 import { GameViewImage } from "./index"
 
 const GameView = () => {
@@ -8,8 +9,17 @@ const GameView = () => {
 
     return (
         <div className='w-full flex justify-between items-center mt-16 lg:mt-2'>
-            <GameViewImage image={state.userImage} />
-            <GameViewImage image={state.pcImage} />
+            {state.isClick ? (
+                <>
+                    <QuestionImage />
+                    <QuestionImage />
+                </>
+            ) : (
+                <>
+                    <GameViewImage image={state.userImage} />
+                    <GameViewImage image={state.pcImage} />
+                </>
+            )}
         </div>
     )
 }

@@ -13,13 +13,13 @@ const Controller = ({ pcMove }: ControllerProps) => {
     // dispatcher is handler the user clicked on controller func
     const dispatcher = (key: string, path: string) => {
 
-        dispatch({ type: "SET_USER_IMAGE", payload: "/images/question1.png" })
-        dispatch({ type: "SET_PC_IMAGE", payload: "/images/question1.png" })
+        dispatch({ type: "ACTIVE_IS_CLICK" })
         // call pcMove to move the pc by the random chose
         setTimeout(() => {
             dispatch({ type: "SET_USER_SYMBOL", payload: key })
             dispatch({ type: "SET_USER_IMAGE", payload: path })
             pcMove()
+            dispatch({ type: "INACTIVE_IS_CLICK" })
         }, 1000);
     }
 

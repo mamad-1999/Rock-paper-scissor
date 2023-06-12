@@ -13,6 +13,7 @@ type StateType = {
     pcSelect: string
     userImage: string
     pcImage: string
+    isClick: boolean
 }
 
 // --- action type {type and payload} --- //
@@ -22,7 +23,7 @@ type ActionPayloadType = {
 }
 
 type ActionType = {
-    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE" | "INCREMENT_ROUND" | "RESET"
+    type: "INCREMENT_GAME_TIES" | "INCREMENT_USER_SCORE" | "INCREMENT_PC_SCORE" | "INCREMENT_ROUND" | "RESET" | "ACTIVE_IS_CLICK" | "INACTIVE_IS_CLICK"
 }
 
 type ActionReducerType = ActionPayloadType | ActionType
@@ -36,7 +37,8 @@ const initialState = {
     userSelect: "",
     pcSelect: "",
     userImage: "/images/rock2.png",
-    pcImage: "/images/rock1.png"
+    pcImage: "/images/rock1.png",
+    isClick: false
 } as StateType
 
 
@@ -66,6 +68,12 @@ const reducer = (state: StateType, action: ActionReducerType) => {
         }
         case "SET_PC_IMAGE": {
             return { ...state, pcImage: action.payload }
+        }
+        case "ACTIVE_IS_CLICK": {
+            return { ...state, isClick: true }
+        }
+        case "INACTIVE_IS_CLICK": {
+            return { ...state, isClick: false }
         }
         case "RESET": {
             return initialState
