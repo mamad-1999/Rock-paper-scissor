@@ -7,8 +7,8 @@ const BombAnimation = () => {
     const { state } = useGameContext()
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
-    let maxParticleCount: number = 150; // set max confetti count
-    let particleSpeed = 2; // set the particle animation speed
+    let maxParticleCount: number = 100; // set max confetti count
+    let particleSpeed = 1; // set the particle animation speed
 
     let colors = [
         "DodgerBlue",
