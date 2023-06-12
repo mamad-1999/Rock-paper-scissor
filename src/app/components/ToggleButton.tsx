@@ -5,7 +5,7 @@ const ToggleButton = () => {
     const { theme, toggleTheme } = useThemeCOntext()
 
     return (
-        <div onClick={toggleTheme} className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-10 md:w-12 h-10 md:h-12 rounded-3xl bg-zinc-600 cursor-pointer">
+        <div onClick={toggleTheme} className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-10 md:w-12 h-10 md:h-12 rounded-3xl bg-zinc-600 cursor-pointer z-10">
             {theme === "light" ?
                 <svg
                     className="absolute w-6 md:w-8 h-6 md:h-8 fill-white"

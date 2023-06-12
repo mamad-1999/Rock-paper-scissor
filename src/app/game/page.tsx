@@ -4,6 +4,7 @@ import { Controller, Scores, Round, GameView, ToggleButton, ButtonBox } from "..
 import { randomPcMove } from "../../../utils/randomPcMove"
 import { useGameContext } from "../context/gameContext"
 import { useEffect } from "react"
+import BombAnimation from "../components/BombAnimation"
 
 const GamePage = () => {
     const { state, dispatch } = useGameContext()
@@ -55,6 +56,7 @@ const GamePage = () => {
             <Controller pcMove={pcMoveHandler} />
             <ToggleButton />
             <ButtonBox />
+            <BombAnimation />
         </div>
     )
 }
