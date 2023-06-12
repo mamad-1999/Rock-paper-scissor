@@ -15,7 +15,7 @@ const GamePage = () => {
             determineWinner(userSelect, pcSelect)
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [state.pcSelect])
+    }, [state.roundCounter])
 
     // handle pc Move after user clicked on controller button
     const pcMoveHandler = () => {
@@ -23,11 +23,11 @@ const GamePage = () => {
         // set in state
         dispatch({ type: "SET_PC_IMAGE", payload: image })
         dispatch({ type: "SET_PC_SYMBOL", payload: title })
+        dispatch({ type: "INCREMENT_ROUND" })
     }
 
     // point the winner after each round
     const determineWinner = (user: string, pc: string) => {
-        dispatch({ type: "INCREMENT_ROUND" })
         // check equal user and pc 
         if (user === pc) {
             return dispatch({ type: "INCREMENT_GAME_TIES" })
