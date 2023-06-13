@@ -36,7 +36,7 @@ const Controller = ({ pcMove }: ControllerProps) => {
         dispatcher("paper", "/images/paper2.png")
     }
     return (
-        <div className='w-full mt-28 md:mt-12 absolute bottom-10 flex gap-4 md:gap-8 items-center justify-center z-10'>
+        <div className='w-full mt-28 md:mt-12 absolute bottom-28 md:bottom-10 flex gap-4 md:gap-8 items-center justify-center z-10'>
             <ControllerItem click={rockClick} path='/images/rock-user.png' />
             <ControllerItem click={paperClick} path='/images/paper-user.png' />
             <ControllerItem click={scissorClick} path='/images/scissors-user.png' />
