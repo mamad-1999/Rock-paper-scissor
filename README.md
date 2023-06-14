@@ -34,5 +34,8 @@
 - Play again to continue the game.
 
 ----
-![Screenshot at 2023-06-08 18-13-31](https://github.com/mamad-1999/Rock-paper-scissor/assets/91375726/c935fc13-e25b-438d-87fb-6518ff508b40)
+![Screenshot at 2023-06-14 22-18-52](https://github.com/mamad-1999/Rock-paper-scissor/assets/91375726/5571c6e7-45bb-48d6-b125-d8b25ec4298c)
+
+![Screenshot at 2023-06-14 22-19-29](https://github.com/mamad-1999/Rock-paper-scissor/assets/91375726/4807c911-7614-4869-a9d0-b04e58f66783)
+
 
