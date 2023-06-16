@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable security/detect-object-injection */
+
 import { useRef, useEffect } from "react";
 import { Howl } from "howler";
 import { useGameContext } from "../context/gameContext";
