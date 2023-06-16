@@ -9,6 +9,7 @@ type RoundProps = {
 function Round({ round }: RoundProps) {
   const [animation, setAnimation] = useState(false);
 
+  // handle round number effect
   useEffect(() => {
     setAnimation(true);
     const timer = setTimeout(() => {
