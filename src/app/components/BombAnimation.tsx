@@ -24,13 +24,13 @@ const BombAnimation = () => {
         "SandyBrown",
         "Chocolate",
         "Crimson",
-    ];
+    ] as string[];
 
     const sound = new Howl({
         src: ["/winner.mp3"]
     })
     let streamingConfetti: boolean = false;
-    let animationTimer: any = null;
+    let animationTimer: number | null = null;
     let particles: any[] = [];
     let waveAngle: number = 0;
 
@@ -46,8 +46,8 @@ const BombAnimation = () => {
     };
 
     const startConfetti = () => {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        const width: number = window.innerWidth;
+        const height: number = window.innerHeight;
         if (typeof window !== "undefined" && window.requestAnimationFrame) {
             window.requestAnimationFrame =
                 window.requestAnimationFrame ||
