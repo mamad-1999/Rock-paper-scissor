@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { useGameContext } from "../context/gameContext";
+import { Howl } from "howler";
 
 const BombAnimation = () => {
     const { state } = useGameContext()
@@ -24,6 +25,10 @@ const BombAnimation = () => {
         "Chocolate",
         "Crimson",
     ];
+
+    const sound = new Howl({
+        src: ["/winner.mp3"]
+    })
     let streamingConfetti: boolean = false;
     let animationTimer: any = null;
     let particles: any[] = [];
@@ -119,7 +124,10 @@ const BombAnimation = () => {
     };
 
     useEffect(() => {
-        if (state.userScore > 0) startConfetti()
+        if (state.userScore > 0) {
+            startConfetti()
+            sound.play()
+        } 
         setTimeout(() => {
             stopConfetti()
         }, 800)
@@ -135,7 +143,7 @@ const BombAnimation = () => {
 
     return (
         <div className="absolute w-[350px] md:w-[600px] h-screen mx-auto top-0 right-0 left-0 flex justify-center">
-            <canvas className="w-[350px]" height={500} ref={canvasRef}></canvas>
+            <canvas className="w-[350px] md:w-[500px]" height={500} ref={canvasRef}></canvas>
         </div>
     );
 };
