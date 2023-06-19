@@ -10,7 +10,7 @@
 this project deploy on vercel 
 
 
-[![Deploy with Vercel](https://rock-paper-scissor-jade-pi.vercel.app/)
+[![Deploy with Vercel](https://vercel.com/button)](https://rock-paper-scissor-jade-pi.vercel.app/)
 
 ---
 ### Features
