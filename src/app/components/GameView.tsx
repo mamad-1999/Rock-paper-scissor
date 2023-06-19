@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { useGameContext } from "../context/gameContext"
-import QuestionImage from "./QuestionImage"
-import { GameViewImage } from "./index"
+import { useGameContext } from "../context/gameContext";
+import QuestionImage from "./QuestionImage";
+import GameViewImage from "./GameViewImage";
 
-const GameView = () => {
-    const { state } = useGameContext()
+function GameView() {
+  const { state } = useGameContext();
 
-    return (
-        <div className='w-full flex justify-between items-center mt-16 lg:mt-2'>
-            {state.isClick ? (
-                <>
-                    <QuestionImage />
-                    <QuestionImage />
-                </>
-            ) : (
-                <>
-                    <GameViewImage image={state.userImage} />
-                    <GameViewImage image={state.pcImage} />
-                </>
-            )}
-        </div>
-    )
+  return (
+    <div className="w-full flex justify-between items-center mt-16 lg:mt-2">
+      {state.isClick ? (
+        <>
+          <QuestionImage />
+          <QuestionImage />
+        </>
+      ) : (
+        <>
+          <GameViewImage image={state.userImage} />
+          <GameViewImage image={state.pcImage} />
+        </>
+      )}
+    </div>
+  );
 }
 
-export default GameView
+export default GameView;

@@ -1,62 +1,73 @@
-"use client"
+"use client";
 
-import { createContext, useEffect, useState, useContext } from "react";
+import React, {
+  createContext,
+  useEffect,
+  useState,
+  useContext,
+  useMemo,
+} from "react";
 
 interface ThemeContextType {
-    theme: string;
-    toggleTheme: () => void;
+  theme: string;
+  toggleTheme: () => void;
 }
 
 interface ThemeContextProps {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-    theme: 'light',
-    toggleTheme: () => { },
+  theme: "light",
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  toggleTheme: () => {},
 });
 
-const ThemeProvider = ({ children }: ThemeContextProps) => {
-    const [theme, setTheme] = useState('light');
+function ThemeProvider({ children }: ThemeContextProps) {
+  const [theme, setTheme] = useState("light");
 
-    const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
+  useEffect(() => {
+    const getInitialTheme = (): string => {
+      if (typeof window !== "undefined" && window.localStorage) {
+        const colorPrefers = window.localStorage.getItem("color-theme");
+        if (typeof colorPrefers === "string") return colorPrefers;
+      }
+      return "light";
     };
 
-    useEffect(() => {
-        const getInitialTheme = (): string => {
-            if (typeof window !== 'undefined' && window.localStorage) {
-                const colorPrefers = window.localStorage.getItem('color-theme');
-                if (typeof colorPrefers === 'string') return colorPrefers;
-            }
-            return 'light';
-        };
+    setTheme(getInitialTheme());
+  }, []);
 
-        setTheme(getInitialTheme());
-    }, []);
+  const rawSetTheme = (themeChose: string) => {
+    const root = window.document.documentElement;
+    const isDark = themeChose === "dark";
 
-    const rawSetTheme = (theme: string) => {
-        const root = window.document.documentElement
-        const isDark = theme === 'dark'
+    root.classList.remove(isDark ? "light" : "dark");
+    root.classList.add(themeChose);
 
-        root.classList.remove(isDark ? 'light' : 'dark')
-        root.classList.add(theme)
+    localStorage.setItem("color-theme", themeChose);
+  };
 
-        localStorage.setItem('color-theme', theme)
-    }
+  useEffect(() => {
+    rawSetTheme(theme);
+  }, [theme]);
 
-    useEffect(() => {
-        rawSetTheme(theme)
-    }, [theme])
+  const value = useMemo(
+    () => ({
+      toggleTheme: () => {
+        setTheme(theme === "light" ? "dark" : "light");
+      },
+      theme,
+    }),
+    [theme]
+  );
 
-    return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    )
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
 
-export default ThemeProvider
+export default ThemeProvider;
 
 // --- easy use this context --- //
-export const useThemeCOntext = () => useContext(ThemeContext) 
+export const useThemeCOntext = () => useContext(ThemeContext);

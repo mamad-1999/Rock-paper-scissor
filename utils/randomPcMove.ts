@@ -1,4 +1,4 @@
-let pcMove = [
+const pcMove = [
   {
     title: "rock",
     image: "/images/rock1.png",
