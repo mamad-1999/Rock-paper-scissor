@@ -6,6 +6,13 @@
   <img width="300px" hight="300px" src="https://github.com/mamad-1999/Rock-paper-scissor/assets/91375726/8344135d-452c-4085-b81c-0f0d72ee1362" alt="js" />
 </p>
 
+---
+this project deploy on vercel 
+
+
+[![Deploy with Vercel](https://rock-paper-scissor-jade-pi.vercel.app/)
+
+---
 ### Features
 
 - Single Player Mode: Play against the computer and test your skills.
