@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import {
-  Controller,
-  Scores,
-  Round,
-  GameView,
-  ToggleButton,
-  ButtonBox,
-} from "../components/index";
+import Scores from "../components/Scores";
+import Round from "../components/Round";
+import GameView from "../components/GameView";
+import ToggleButton from "../components/ToggleButton";
+import ButtonBox from "../components/ButtonBox";
+import Controller from "../components/Controller";
 import { randomPcMove } from "../../../utils/randomPcMove";
 import { useGameContext } from "../context/gameContext";
 import BombAnimation from "../components/BombAnimation";
