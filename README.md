@@ -1,4 +1,5 @@
 ## Rock-Paper-Scissors
+[![GitHub Repo stars](https://img.shields.io/github/stars/mamad-1999/Rock-paper-scissor?style=social)](https://github.com/mamad-1999/Rock-paper-scissor)
 
 #### Rock-Paper-Scissors is a classic game built with Next.js 13, Tailwind CSS for UI styling, and TypeScript for type checking. Challenge your friends or play against the computer in this fun and interactive game.
 
