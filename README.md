@@ -6,6 +6,7 @@
   <img width="60px" hight="60px" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="icon" />
   <img width="60px" hight="60px" src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg"           alt="icon" />
   <img width="60px" hight="60px" src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="icon" />
+    <img width="60px" hight="60px" src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="icon" />
 </div>
 
 ----
