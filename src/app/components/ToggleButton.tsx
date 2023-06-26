@@ -9,7 +9,7 @@ function ToggleButton() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="flex justify-center items-center absolute md:right-8 md:top-8 top-40 right-8 w-10 md:w-12 h-10 md:h-12 rounded-3xl bg-zinc-600 cursor-pointer z-10"
+      className="flex justify-center items-center absolute md:right-8 md:top-8 top-48 right-8 w-10 md:w-12 h-10 md:h-12 rounded-3xl bg-zinc-600 cursor-pointer z-10"
     >
       {theme === "light" ? (
         <svg

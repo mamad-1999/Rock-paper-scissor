@@ -16,7 +16,7 @@ function ButtonBox() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-2 md:gap-4 absolute md:left-8 md:top-8 top-40 left-8 z-10">
+    <div className="flex flex-col md:flex-row gap-2 md:gap-4 absolute md:left-8 md:top-8 top-48 left-8 z-10">
       <button
         type="button"
         onClick={resetGame}

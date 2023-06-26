@@ -5,7 +5,6 @@
   
   /*---------------*/
   
-  @import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
   * {
     box-sizing: border-box;
   }
@@ -13,8 +12,8 @@
   .flipCounter {
     display: block;
     position: relative;
-    width: 140px;
-    height: 120px;
+    width: 90px;
+    height: 80px;
     -webkit-perspective-origin: 50% 50%;
     perspective-origin: 50% 50%;
     -webkit-perspective: 300px;
@@ -36,9 +35,7 @@
   }
   .upperCard span,
   .lowerCard span {
-    font-size: 5em;
-    font-family: "Droid Sans Mono", monospace;
-    font-weight: lighter;
+    font-size: 4em;
     color: #333333;
   }
   
@@ -69,16 +66,14 @@
     justify-content: center;
     position: absolute;
     left: 0;
-    width: 140px;
-    height: 60px;
+    width: 90px;
+    height: 40px;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
   .flipCard span {
-    font-family: "Droid Sans Mono", monospace;
-    font-size: 5em;
-    font-weight: lighter;
+    font-size: 4em;
     color: #333333;
   }
   .flipCard.unfold {
