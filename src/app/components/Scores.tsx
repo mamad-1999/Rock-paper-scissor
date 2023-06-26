@@ -19,7 +19,7 @@ function Scores() {
             : "text-red-500"
         }
       />
-      <ScoreBox title="Equal" score={gameTies} scoreColor="text-primary" />
+      <ScoreBox title="Equal" score={gameTies} scoreColor="text-zinc-800" />
       <ScoreBox
         title="Win"
         score={pcScore}
