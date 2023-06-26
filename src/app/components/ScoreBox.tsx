@@ -23,8 +23,10 @@ function ScoreBox({ score, title, scoreColor }: ScoreBoxPropsType) {
   const number2 = !change ? +score - 1 : score;
 
   return (
-    <div className="flex flex-col justify-center items-center gap-3">
-      <span className="text-xl bg-zinc-700 text-white py-1 px-3">{title}</span>
+    <div className="flex flex-col justify-center items-center">
+      <span className="w-[90px] text-xl text-center bg-zinc-700 text-white py-1 px-3">
+        {title}
+      </span>
       <div className="flipCounter">
         <div className="upperCard">
           <span className={`${scoreColor}`}>{score}</span>
