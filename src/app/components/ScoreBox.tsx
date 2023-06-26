@@ -6,10 +6,10 @@ import "../flip.css";
 type ScoreBoxPropsType = {
   title: string;
   score: number | string;
-  // scoreColor: string;
+  scoreColor: string;
 };
 
-function ScoreBox({ score, title }: ScoreBoxPropsType) {
+function ScoreBox({ score, title, scoreColor }: ScoreBoxPropsType) {
   const [change, setChange] = useState(true);
 
   useEffect(() => {
@@ -27,16 +27,16 @@ function ScoreBox({ score, title }: ScoreBoxPropsType) {
       <span className="text-xl bg-zinc-700 text-white py-1 px-3">{title}</span>
       <div className="flipCounter">
         <div className="upperCard">
-          <span>{score}</span>
+          <span className={`${scoreColor}`}>{score}</span>
         </div>
         <div className="lowerCard">
-          <span>{+score - 1}</span>
+          <span className={`${scoreColor}`}>{+score - 1}</span>
         </div>
         <div className={`flipCard first ${animation1}`}>
-          <span>{number1}</span>
+          <span className={`${scoreColor}`}>{number1}</span>
         </div>
         <div className={`flipCard second ${animation2}`}>
-          <span>{number2}</span>
+          <span className={`${scoreColor}`}>{number2}</span>
         </div>
       </div>
     </div>
