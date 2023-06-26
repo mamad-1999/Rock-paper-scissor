@@ -13,14 +13,17 @@ function ScoreBox({ score, title, scoreColor }: ScoreBoxPropsType) {
   const [change, setChange] = useState(true);
 
   useEffect(() => {
-    setChange(!change);
+    if (+score > 0) {
+      setChange(!change);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [score]);
 
   const animation1 = change ? "fold" : "unfold";
   const animation2 = !change ? "fold" : "unfold";
-  const number1 = change ? +score - 1 : score;
-  const number2 = !change ? +score - 1 : score;
+  const oldNumber = +score > 0 ? +score - 1 : score;
+  const number1 = change ? oldNumber : score;
+  const number2 = !change ? oldNumber : score;
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -32,7 +35,7 @@ function ScoreBox({ score, title, scoreColor }: ScoreBoxPropsType) {
           <span className={`${scoreColor}`}>{score}</span>
         </div>
         <div className="lowerCard">
-          <span className={`${scoreColor}`}>{+score - 1}</span>
+          <span className={`${scoreColor}`}>{oldNumber}</span>
         </div>
         <div className={`flipCard first ${animation1}`}>
           <span className={`${scoreColor}`}>{number1}</span>
