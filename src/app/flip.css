@@ -1,15 +1,4 @@
-.App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
-  /*---------------*/
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .flipCounter {
+.flipCounter {
     display: block;
     position: relative;
     width: 90px;
@@ -33,7 +22,8 @@
     overflow: hidden;
   }
   .upperCard span,
-  .lowerCard span {
+  .lowerCard span,
+  .flipCard span {
     font-size: 4em;
   }
   
@@ -42,7 +32,8 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
   }
-  .upperCard span {
+  .upperCard span,
+  .flipCard.fold span {
     -webkit-transform: translateY(50%);
     transform: translateY(50%);
   }
@@ -52,7 +43,9 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-  .lowerCard span {
+
+  .lowerCard span,
+  .flipCard.unfold span {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
@@ -68,9 +61,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  .flipCard span {
-    font-size: 4em;
-  }
+ 
   .flipCard.unfold {
     top: 50%;
     align-items: flex-start;
@@ -82,10 +73,7 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-  .flipCard.unfold span {
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+ 
   .flipCard.fold {
     top: 0%;
     align-items: flex-end;
@@ -96,10 +84,6 @@
     background-color: white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-  }
-  .flipCard.fold span {
-    -webkit-transform: translateY(50%);
-    transform: translateY(50%);
   }
   
   .fold {
