@@ -8,7 +8,7 @@ function GameView() {
   const { state } = useGameContext();
 
   return (
-    <div className="w-full flex justify-between items-center mt-16 lg:mt-2">
+    <div className="w-full flex justify-between items-center mt-8 lg:mt-2">
       {state.isClick ? (
         <>
           <QuestionImage />
