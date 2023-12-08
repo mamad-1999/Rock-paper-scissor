@@ -9,6 +9,19 @@ const withPWA = require("next-pwa")({
     // disable: process.env.NODE_ENV === "development", // Disable PWA in development mode
     register: true, // Register the PWA service worker
     skipWaiting: true, // Skip waiting for service worker activation
+    runtimeCaching: [
+        {
+            handler: "CacheFirst",
+            urlPattern: /^http?.*/,
+            options: {
+                cacheName: 'offlineCache',
+                expiration: {
+                    maxEntries: 300,
+                    maxAgeSeconds: 60 * 60 * 24 * 20, // 20 days
+                }
+            },
+        }
+    ],
 });
 
 // Export the combined configuration for Next.js with PWA support
