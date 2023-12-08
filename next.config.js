@@ -12,7 +12,7 @@ const withPWA = require("next-pwa")({
     runtimeCaching: [
         {
             handler: "CacheFirst",
-            urlPattern: /^http?.*/,
+            urlPattern: /^https?.*/,
             options: {
                 cacheName: 'offlineCache',
                 expiration: {
