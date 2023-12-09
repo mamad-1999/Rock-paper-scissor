@@ -1,13 +1,24 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = nextConfig;
-
-// Configuration object tells the next-pwa plugin 
-const withPWA = require("next-pwa")({
-    dest: "public", // Destination directory for the PWA files
-    swSrc: "service-worker.js"
+const withPWA = require("@ducanh2912/next-pwa").default({
+    cacheOnFrontEndNav: true,
+    aggressiveFrontEndNavCaching: true,
+    reloadOnOnline: true,
+    swcMinify: true,
+    dest: "public",
+    fallbacks: {
+        //image: "/static/images/fallback.png",
+        document: "/fallback", // if you want to fallback to a custom page rather than /_offline
+        // font: '/static/font/fallback.woff2',
+        // audio: ...,
+        // video: ...,
+    },
+    workboxOptions: {
+        disableDevLogs: true,
+    },
+    // ... other options you like
 });
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    // ... other options you like
+};
 
-// Export the combined configuration for Next.js with PWA support
 module.exports = withPWA(nextConfig);

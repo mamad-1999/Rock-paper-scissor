@@ -1,18 +1,7 @@
-"use client"
-
-import { useEffect } from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then(function (registration) {
-        console.log('Service Worker Registered');
-      });
-    }
-  }, []);
   return (
     <main className="w-full flex flex-col gap-8 items-center justify-center min-h-screen bg-stone-200">
       <Image
