@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/howler": "^2.2.7",
+    "@types/howler": "^2.2.12",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
