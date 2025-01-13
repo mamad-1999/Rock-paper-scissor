@@ -15,7 +15,7 @@
     "@types/react-dom": "^19",
     "autoprefixer": "10.4.20",
     "eslint": "8.42.0",
-    "eslint-config-next": "15.0.3",
+    "eslint-config-next": "15.1.4",
     "howler": "^2.2.3",
     "@ducanh2912/next-pwa": "^10.2.9",
     "next": "15.1.3",
